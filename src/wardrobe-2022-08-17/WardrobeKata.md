@@ -14,9 +14,9 @@ The wardrobe elements are available in the following sizes: 50cm, 75cm, 100cm, a
 
 Here is the price list for the available wardrobe elements:
 
-50cm => 59 USD
-75cm => 62 USD
-100cm => 90 USD
-120cm => 111 USD
+- 50cm => 59 USD
+- 75cm => 62 USD
+- 100cm => 90 USD
+- 120cm => 111 USD
 
 ### Write a second function that checks which of the resulting combinations is the cheapest one.
