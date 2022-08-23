@@ -2,14 +2,18 @@ const SHELVES = [50, 75, 100, 120];
 
 const wardrobe = (width: number) => {
   let output: Array<Array<number>> = [];
-  SHELVES.map((w) => {
+
+  SHELVES.filter((x) => x <= width).map((w) => {
     if (width % w == 0) {
       const numShelves = width / w;
-      console.log(`num shelves:  `, numShelves);
       const newArray = Array(numShelves).fill(w);
-      console.log(`new array:  `, newArray);
       output.push(newArray);
-      console.log(`current output:  `, output);
+    } else if (SHELVES.filter((x) => x !== w).includes(width % w)) {
+      const numShelves = Math.floor(width / w);
+      const remainder = width % w;
+      let newArray = Array(numShelves).fill(w);
+      newArray = newArray.concat(remainder);
+      output.push(newArray.sort());
     }
   });
   return output;
